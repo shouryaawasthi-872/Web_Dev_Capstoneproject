@@ -1,0 +1,173 @@
+.profile-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.profile-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .profile-content {
+    grid-template-columns: 3fr 2fr;
+  }
+}
+
+.profile-info-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-avatar {
+  width: 96px;
+  height: 96px;
+  background-color: var(--bg-color);
+  border: 2px solid var(--border-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.profile-info-card h2 {
+  margin-bottom: 2rem;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.metric-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: var(--bg-color);
+  border-radius: var(--radius-md);
+}
+
+.metric-label {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.metric-value {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.metric-item .input-wrapper {
+  margin-bottom: 0;
+}
+
+.metric-item .input-field {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.profile-actions {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.edit-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.bmi-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.bmi-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  color: var(--primary);
+}
+
+.bmi-header h3 {
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.bmi-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.bmi-value {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.bmi-category {
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.bmi-scale {
+  display: flex;
+  height: 8px;
+  border-radius: 4px;
+  overflow: visible; /* to show marker */
+  margin-bottom: 2rem;
+  position: relative;
+  background-color: var(--border-color);
+}
+
+.bmi-segment {
+  height: 100%;
+}
+
+.bmi-segment:first-child {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.bmi-segment:last-child {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.bmi-marker {
+  position: absolute;
+  top: -6px;
+  width: 4px;
+  height: 20px;
+  background-color: var(--text-primary);
+  border-radius: 2px;
+  transform: translateX(-50%);
+  box-shadow: 0 0 0 2px var(--surface-color);
+}
+
+.bmi-description {
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
